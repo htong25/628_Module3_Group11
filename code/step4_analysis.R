@@ -10,6 +10,24 @@ data = script
 
 stars = data$stars_x
 stars$stars = data$stars_x
+#Distributio of stars
+hist(as.numeric(data$stars_x))
+
+# Correlation plot
+library(corrplot)
+index=c(which(colnames(data)=="bad"),which(colnames(data)=="worst"),which(colnames(data)=="awful"),which(colnames(data)=="horrible"),
+        which(colnames(data)=="mediocre"),which(colnames(data)=="average"),which(colnames(data)=="adequate"),which(colnames(data)=="ordinary"),
+        which(colnames(data)=="decent"),which(colnames(data)=="warm"),which(colnames(data)=="nice"),which(colnames(data)=="affordable"),
+        which(colnames(data)=="fantastic"),which(colnames(data)=="excellent"),which(colnames(data)=="wonderful"),which(colnames(data)=="terrific"))
+
+data.cor=data[,c(1,index)]
+for (i in 1:(length(index)+1)) {
+  data.cor[,i]=as.numeric(data.cor[,i])
+}
+M<-cor(data.cor)
+corrplot(M)
+
+
 #Function to make barplot of frequencies and ratings
 plotWordStar <- function(stars,data,vec,mfrow = c(4,4)) {
   par(mfrow = mfrow)
@@ -54,6 +72,7 @@ vec3 = c('parking', 'waiting', 'service',
         'chip', 'burger', 'fry', 'wing'
         
 )
+
 #Make three set of plots 
 plotWordStar(stars,data,vec1,mfrow = c(4,4))
 plotWordStar(stars,data,vec2,mfrow = c(4,4))
