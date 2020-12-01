@@ -6,6 +6,8 @@ This folder contains the following files used to conduct data cleaning and data 
 - `step4_analysis.R` : make plots and do t-tests
 
 ## Contribution
-Shikun Liu: 
-Hao Tong: 
-Jiayi Xu: completed `step2` and `get_comparison()` function in `step4`, and other maintenance work
+- Shikun Liu: 
+
+- Hao Tong: 
+
+- Jiayi Xu: completed `step2` and `get_comparison()` function in `step4`, and other maintenance work
