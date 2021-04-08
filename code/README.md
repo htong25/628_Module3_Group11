@@ -8,6 +8,6 @@ This folder contains the following files used to conduct data cleaning and data 
 ## Contribution
 - Shikun Liu: 
 
-- Hao Tong: Completed 'step1', 'step3' and modified 'step4'
+- Hao Tong: Completed `step1`, `step3` and modified `step4`
 
 - Jiayi Xu: completed `step2` and `get_comparison()` function in `step4`, and other maintenance work
